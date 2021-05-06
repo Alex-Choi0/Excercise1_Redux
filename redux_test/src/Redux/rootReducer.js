@@ -1,5 +1,5 @@
 import toyReducer from './toy/toyReducer';
 
-const rootReducer = toyReducer;
+// const rootReducer = toyReducer;
 
-export default rootReducer;
+// export default toyReducer;

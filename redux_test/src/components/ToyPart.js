@@ -1,16 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux'; // react, redux연결
-import { buyToy, sellToy } from '../Redux/acTion'; // toy action 연결
+import { buyToy, sellToy } from '../Redux'; // toy action 연결
 
 // 위 함수는 App.js에 추가할 component
 function ToyPart(props){
-    console.log('Toy(props) : ', props);
+    console.log('Toy(props) : ',typeof props ,props);
+    console.log('Toy(props.numberOfToys) : ',typeof props.numOfToys.numOfToys ,props.numOfToys.numOfToys);
+    
     // return할 component
     return (
         <div>
-            <h2>Number of Toys - {props.numOfToys}</h2>
-            <button onClick = {props.nomOfToys}>Buy Toys</button>
-            <button onClick = {props.nomOfToys}>Sell Toys</button>
+            <h2>Number of Toys -{props.numOfToys.numOfToys} </h2>
+            <button onClick = {props.buyToy}>Buy Toys</button>
+            <button onClick = {props.sellToy}>Sell Toys</button>
         </div>
     )
 }
