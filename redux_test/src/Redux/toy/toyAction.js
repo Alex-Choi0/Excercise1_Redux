@@ -8,6 +8,6 @@ export const buyToy = () => {
 
 export const sellToy = () => {
     return {
-        type : BUY_TOY
+        type : SELL_TOY
     }
 }
