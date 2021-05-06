@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import { Provider } from 'react-redux'; // store를 App.js전체에 사용하기 위해 필요
+import store from './Redux/store'; // 실제 Redux의 store
+
+// components part
+import ToyPart from './components/ToyPart';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Provider store = {store}>
+        <div className = "App">
+          <ToyPart />
+        </div>
+      </Provider>
+
   );
 }
 
