@@ -10,7 +10,7 @@ function ToyPart(props){
     // return할 component
     return (
         <div>
-            <h2>Number of Toys -{props.numOfToys.numOfToys} </h2>
+            <h2>Number of Toys -{props.numOfToys} </h2>
             <button onClick = {props.buyToy}>Buy Toys</button>
             <button onClick = {props.sellToy}>Sell Toys</button>
         </div>
@@ -21,7 +21,7 @@ function ToyPart(props){
 const mapStateToProps = (state) => {
     console.log('mapStateToProps : ', state);
     return {
-        numOfToys : state,
+        numOfToys : state.numOfToys,
     }
 }
 
