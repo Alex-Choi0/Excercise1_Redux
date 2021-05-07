@@ -4,8 +4,8 @@ import { buyToy, sellToy } from '../Redux'; // toy action 연결
 
 // 위 함수는 App.js에 추가할 component
 function ToyPart(props){
-    console.log('Toy(props) : ',typeof props ,props);
-    console.log('Toy(props.numberOfToys) : ',typeof props.numOfToys.numOfToys ,props.numOfToys.numOfToys);
+    console.log('Toy(props) : ',typeof props.numOfToys ,props.numOfToys);
+    console.log('Toy(props.numberOfToys) : ',typeof props.numOfToys ,props.numOfToys);
     
     // return할 component
     return (
@@ -21,7 +21,8 @@ function ToyPart(props){
 const mapStateToProps = (state) => {
     console.log('mapStateToProps : ', state);
     return {
-        numOfToys : state.numOfToys,
+        numOfToys : state.toyReducer.numOfToys,
+        numOfCookie : state.cookieReducer.numOfCookie
     }
 }
 
