@@ -32,10 +32,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         buyCookie : (num) => {
-            dispatch(buyCookie(num));
+            dispatch(buyCookie(Number(num)));
         },
         sellCookie : (num) => {
-            dispatch(sellCookie(num));
+            dispatch(sellCookie(Number(num)));
         }
     }
 }
