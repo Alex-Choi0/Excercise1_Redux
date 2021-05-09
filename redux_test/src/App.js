@@ -4,6 +4,7 @@ import store from './Redux/store'; // 실제 Redux의 store
 // components part
 import ToyPart from './components/ToyPart';
 import CookiePart from './components/CookiePart';
+import ResumePart from './components/ResumePart';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <div className = "App">
           <ToyPart />
           <CookiePart />
+          <ResumePart />
         </div>
       </Provider>
 
