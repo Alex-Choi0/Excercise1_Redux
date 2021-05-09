@@ -1,6 +1,7 @@
-// cookieTypes에서 구매와 판매 타입을 받아온다.
+// resumeTypes에서 이력서 지원 타입을 받아온다.
 import { ADD_RESUME } from './resumeTypes';
 
+// 지원자의 이름과 이메일을 state로 저장한다
 const initialState = {
     resume : {
         Name : '',
@@ -12,11 +13,11 @@ const initialState = {
 const resumeReducer = (state = initialState, action) => {
     
     switch(action.type){
-        case ADD_RESUME: // 가게에서 쿠키를 사기 때문에 -payload한다.
+        case ADD_RESUME: // 이력서를 지원하는 액션이다.
 
             return {
                 ...state,
-                resume : action.payload
+                resume : action.payload // 이력서는 덮어씌운다
             }
         
 
