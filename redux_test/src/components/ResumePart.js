@@ -4,6 +4,7 @@ import { addResume } from '../Redux'; // resume action 연결
 
 // 위 함수는 App.js에 추가할 component
 function ResumePart(props){
+    // resumeName,resumeEamil를 각각 저장
     const[resumeName, setResumeName] = useState('');
     const[resumeEamil, setResumeEmail] = useState('');
     
@@ -28,7 +29,6 @@ function ResumePart(props){
                     <button 
                         onClick = {
                             () => {
-                            console.log("resumeName,resumeEamil------------>",resumeName);
                             props.addResume({
                                 Name : resumeName,
                                 Email : resumeEamil
