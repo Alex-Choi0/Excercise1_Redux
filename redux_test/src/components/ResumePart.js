@@ -29,11 +29,19 @@ function ResumePart(props){
                     <button 
                         onClick = {
                             () => {
+                            // addResume액션에 지원자
+                            // Name과 Email을 넣는다.
                             props.addResume({
                                 Name : resumeName,
                                 Email : resumeEamil
                             })
+                            setResumeName(""); // Name 초기화
+                            setResumeEmail(""); // Email 초기화
                     }}>Submit</button>
+                </div>
+                <div>
+                    <p>{`이름 : ${props.resume.Name}`}</p>
+                    <p>{`Email : ${props.resume.Email}`}</p>
                 </div>
             
         </div>
@@ -51,6 +59,7 @@ const mapStateToProps = (state) => {
 // Redux실행시 각 action에 따른 method를 Arrow function에따라 dispatch합니다.
 const mapDispatchToProps = (dispatch) => {
     return {
+        // resume는 resumeName, resumeEmail 를 객체로 받아온다.
         addResume : (resume) => {
             dispatch(addResume(resume));
         }
